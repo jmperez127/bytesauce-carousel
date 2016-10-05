@@ -1,0 +1,22 @@
+{
+  "name": "bytesauce-carousel",
+  "description": "AngularJS Carousel",
+  "main": "index.js",
+  "authors": [
+    "Jean Pérez"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angularjs",
+    "carousel"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

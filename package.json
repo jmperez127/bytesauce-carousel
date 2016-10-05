@@ -1,0 +1,29 @@
+{
+  "name": "bytesauce-carousel",
+  "version": "0.1.0",
+  "description": "AngularJS Carousel",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theil/bytesauce-carousel.git"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "angularjs",
+    "carousel"
+  ],
+  "author": "Jean Pérez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theil/bytesauce-carousel/issues"
+  },
+  "homepage": "https://github.com/theil/bytesauce-carousel#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
