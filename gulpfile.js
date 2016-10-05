@@ -12,7 +12,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src("src/scss/*.scss")
+    return gulp.src(["src/scss/*.scss", "!src/scss/_*.scss"])
         .pipe(sass())
         .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());

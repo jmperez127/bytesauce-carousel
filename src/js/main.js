@@ -1,5 +1,5 @@
 var app = angular.module("carouselDemo", ['bytesauceCarousel']);
 app.controller("appCtrl", function($scope) {
-    $scope.items = ["test 1", "test 2"];
+    $scope.items = ["item 1", "item 2", "item 3"];
 });
 

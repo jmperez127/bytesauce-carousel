@@ -6,11 +6,11 @@ angular.module('bytesauceCarousel', [])
         items: ['']
     })
 
-    .factory('factoryName', function() {
+    .factory('factoryName', function () {
 
     })
 
-    .directive('directiveName', function() {
+    .directive('directiveName', function () {
 
     })
 ;

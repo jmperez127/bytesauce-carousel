@@ -6,10 +6,31 @@
     <link rel="stylesheet" href="src/css/bytesauce-carousel.css">
 </head>
 <body ng-app="carouselDemo">
-<div ng-controller="appCtrl">
-{{items}}
-</div>
 
+<div ng-controller="appCtrl" class="bytesauce-carousel">
+    <div class="container">
+        <h3>Bytesauce Carousel Demo</h3>
+
+        <div class="row">
+            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
+            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
+            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
+            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
+
+            <!--<div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>-->
+            <!--<div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>-->
+            <!--<div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>-->
+            <!--<div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>-->
+        </div>
+        <div class="row text-center">
+            <button class="button-primary">Prev</button>
+            <button class="button-primary">Next</button>
+        </div>
+
+      
+    </div>
+
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src="./src/js/bytesauce-carousel.js"></script>
