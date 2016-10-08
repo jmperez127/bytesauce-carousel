@@ -1,9 +1,13 @@
-.bytesauce-carousel{
+.bytesauce-carousel {
   @import "skeleton";
+  @import "bits";
+  @include top-buffers;
+
   img {
     max-width: 100%;
   }
-  .text-center{
+
+  .text-center {
     text-align: center;
   }
 }

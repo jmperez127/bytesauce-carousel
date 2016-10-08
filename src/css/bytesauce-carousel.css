@@ -419,6 +419,26 @@ there.
     content: "";
     display: table;
     clear: both; }
+  .bytesauce-carousel .top-buffer-10 {
+    margin-top: 10px; }
+  .bytesauce-carousel .top-buffer-20 {
+    margin-top: 20px; }
+  .bytesauce-carousel .top-buffer-30 {
+    margin-top: 30px; }
+  .bytesauce-carousel .top-buffer-40 {
+    margin-top: 40px; }
+  .bytesauce-carousel .top-buffer-50 {
+    margin-top: 50px; }
+  .bytesauce-carousel .top-buffer-60 {
+    margin-top: 60px; }
+  .bytesauce-carousel .top-buffer-70 {
+    margin-top: 70px; }
+  .bytesauce-carousel .top-buffer-80 {
+    margin-top: 80px; }
+  .bytesauce-carousel .top-buffer-90 {
+    margin-top: 90px; }
+  .bytesauce-carousel .top-buffer-100 {
+    margin-top: 100px; }
   .bytesauce-carousel img {
     max-width: 100%; }
   .bytesauce-carousel .text-center {

@@ -1,0 +1,11 @@
+//$margins: 100;
+
+@mixin top-buffers {
+  $i: 0;
+  @while $i < 100 {
+    $i: $i + 10;
+    .top-buffer-#{$i} {
+      margin-top: $i+px;
+    }
+  }
+}
