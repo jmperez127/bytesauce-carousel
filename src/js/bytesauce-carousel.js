@@ -44,18 +44,18 @@ angular.module('bytesauceCarousel', [])
   .directive('bytesauceCarousel', function () {
     return {
       restrict: 'E',
+      replace: 'true',
       templateUrl: "src/templates/carousel.html",
-      compile: function (element, attributes) {
-        element.css("border", "1px solid #cccccc");
+      link: function (scope, element, attributes) {
 
-        //var linkFunction = function ($scope, element, attributes) {
-        //  console.log($scope.items, "ITEMS");
-        //  element.html("Student: <b>" + $scope.items[0] + "</b><br/>");
-        //  element.css("background-color", "#ff00ff");
-        //};
-        //return linkFunction;
+        var maxImages = 4;
 
+        scope.items = scope.items.map(function (item) {
+          item.images = item.images.length > maxImages ? item.images.slice(0, maxImages) : item.images;
+          return item;
+        });
       }
+
     };
   })
 ;
