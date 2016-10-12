@@ -1,0 +1,30 @@
+<div class="bytesauce-carousel">
+   <div ng-repeat="item in items">
+    <div class="container" >
+      <div class="row {{direction}}" ng-hide="!isActive($index)">
+        <div
+             ng-class="{
+                          'two columns': item.images.length == 6 || item.images.length == 5,
+                          'three columns': item.images.length == 4,
+                          'four columns' : item.images.length == 3,
+                          'six columns' : item.images.length == 2,
+                          'twelve columns' : item.images.length == 1,
+                        }"
+             ng-repeat="image in item.images"
+        ><img src="{{image.url}}" alt="{{image.title}}">
+        </div>
+        <div class="title" ng-show="item.title">
+          <h5>{{item.title}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class=" text-center top-buffer-20">
+      <button class="button-primary" ng-click="prev()">Prev</button>
+      <button class="button-primary" ng-click="next()">Next</button>
+    </div>
+
+
+</div>

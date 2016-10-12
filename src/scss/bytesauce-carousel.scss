@@ -1,28 +1,20 @@
 .bytesauce-carousel {
-  @import "skeleton";
+  //@import "skeleton";
+  @import "base";
   @import "bits";
+  @import "keyframes";
   @include top-buffers;
-  overflow:hidden;
+  overflow: hidden;
   $height: 400px;
 
   img {
     max-height: $height;
   }
 
-  .text-center {
-    text-align: center;
-  }
-  .hide {
-    display: none !important;
-  }
-  .show {
-    display: block !important;
-  }
-
   .row {
-    height:$height;
+    height: $height;
     overflow: hidden;
-    .title{
+    .title {
       width: 98%;
       background: #000000;
       color: #ffffff;
@@ -36,6 +28,13 @@
   }
   .columns {
     margin: 0;
+  }
+  .two.columns {
+    width: 16.5%;
+    height: $height;
+    img {
+      max-height: 100%;
+    }
   }
   .three.columns {
     width: 25%;
@@ -59,6 +58,7 @@
     }
   }
   .twelve.columns {
+    background-color: #ffffff;
     width: 100%;
     height: $height;
     img {
@@ -66,10 +66,8 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-top: -5%;
     }
   }
-
 
   @media (max-width: 1136px) {
     .column, .columns {
@@ -77,17 +75,24 @@
     }
   }
 
-  a {
-    color: #000;
-    transition-property: color;
-    transition-duration: 0.7s;
-    transition-timing-function: ease-in;
-    transition-delay: 0.3s;
-    //transition: color 0.7s ease-in 0.3s;
+  .right.ng-hide-add {
+    animation: 1.3s bounceOutLeft ease;
+    position: absolute;
+  }
+  .right.ng-hide-remove {
+    animation: 1.3s bounceInRight ease;
+    position: relative;
   }
 
-  a:hover {
-    color: #fff;
+  .left.ng-hide-add {
+    animation: 1.3s bounceOutRight ease;
+    position: relative;
+
+  }
+  .left.ng-hide-remove {
+    animation: 1.3s bounceInLeft ease;
+    position: absolute;
+
   }
 
 }

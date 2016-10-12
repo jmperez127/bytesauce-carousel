@@ -1,6 +1,25 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
+var gulp = require('gulp'),
+  browserSync = require('browser-sync').create(),
+  sass = require('gulp-sass'),
+  gulpLoadPlugins = require('gulp-load-plugins'),
+  plugins = gulpLoadPlugins();
+
+
+gulp.task('js', function () {
+  return gulp.src('src/js/bytesauce-*.js')
+    .pipe(plugins.jshint())
+    .pipe(plugins.jshint.reporter('default'))
+    .pipe(plugins.uglify())
+    .pipe(plugins.concat('app.js'))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('css', function () {
+  return gulp.src('src/css/bytesauce-*.css')
+    .pipe(plugins.sass())
+    .pipe(plugins.concat('app.css'))
+    .pipe(gulp.dest('build'));
+});
 
 gulp.task('serve', ['sass'], function () {
   browserSync.init({

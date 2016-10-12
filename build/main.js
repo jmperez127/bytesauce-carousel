@@ -7,14 +7,14 @@ app.controller("appCtrl", function ($scope) {
         {title: 'image1 title', url: 'http://lorempixel.com/600/400/food'},
         {title: 'image2 title', url: 'http://lorempixel.com/600/400/sports'},
         {title: 'image3 title', url: 'http://lorempixel.com/600/400/abstract'},
-        {title: 'image3 title', url: 'http://lorempixel.com/600/400/nightlife'},
+        {title: 'image3 title', url: 'http://lorempixel.com/600/400/nightlife'}
       ]
     }, {
       title: 'Second Block',
       images: [
-        {title: 'image1 title', url: 'http://lorempixel.com/600/400/food'},
+        {title: 'image1 title', url: 'http://lorempixel.com/600/400/fashion'},
         {title: 'image3 title', url: 'http://lorempixel.com/600/400/nightlife'},
-        {title: 'image2 title', url: 'http://lorempixel.com/600/400/sports'},
+        {title: 'image2 title', url: 'http://lorempixel.com/600/400/sports'}
       ]
     },
     {

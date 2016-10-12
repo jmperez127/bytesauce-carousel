@@ -1,14 +1,11 @@
 <div class="bytesauce-carousel">
-  <div class="container">
-    <h4>Bytesauce Carousel Demo</h4>
-  </div>
-
-  <div ng-repeat="item in items">
-    <div class="container">
-      <div class="row" ng-class="{'hide': $index > 0}">
+   <div ng-repeat="item in items">
+    <div class="container" >
+      <div class="row {{direction}}" ng-hide="!isActive($index)">
         <div
              ng-class="{
-                          'three columns': item.images.length >= 4,
+                          'two columns': item.images.length == 6 || item.images.length == 5,
+                          'three columns': item.images.length == 4,
                           'four columns' : item.images.length == 3,
                           'six columns' : item.images.length == 2,
                           'twelve columns' : item.images.length == 1,
@@ -24,7 +21,7 @@
   </div>
 
 
-    <div class="row text-center top-buffer-20">
+    <div class=" text-center top-buffer-20">
       <button class="button-primary" ng-click="prev()">Prev</button>
       <button class="button-primary" ng-click="next()">Next</button>
     </div>

@@ -1,62 +1,55 @@
-//Requirements:
-//
-//    - build a carousel.
-//- by default display 4 elements.
-//- navigation is made with next and previous buttons.
-//- Next button should be disabled, if user is at the very end of the carousel.
-//- Previous button should be disabled, if user is at the very beginning of carousel.
-//- Clicking on next/previous buttons shows next/prev 4 carousel images accordingly.
-//- The data source of carousel use a variable with a data structure similar to this JSON:
-//
-//    [
-//        {
-//            title: 'First Block',
-//            images: [{title:'image1 title', url: 'url'}, {title:'image2 title', url: 'url'}, {title:'image3 title', url: 'url'}]
-//        },
-//        {
-//            title: 'Second Block',
-//            images: [{title:'image20 title', url: 'url'}, {title:'image23 title', url: 'url'}]
-//        }
-//        ,
-//        {
-//            title: 'Third Block',
-//            images: [{title:'image7 title', url: 'url'}]
-//        }
-//    ]
-//
-//Note: Display random images using lorempixel.com
-//
-//Please use AngularJS 1.5 and try to avoid Jquery.
-
-
-angular.module('bytesauceCarousel', [])
+angular.module('bytesauceCarousel', ['ngAnimate'])
 
   .constant('VERSION', '0.1.0')
 
   .value('defaults', {
-    items: ['']
+    maxImages: 4
   })
 
-  .factory('factoryName', function () {
+  .factory('bytesauceCarouselFactory', function () {
 
   })
 
-  .directive('bytesauceCarousel', function () {
+  .directive('bytesauceCarousel', ["defaults", function (defaults) {
     return {
       restrict: 'E',
       replace: 'true',
-      templateUrl: "src/templates/carousel.html",
+      templateUrl: "templates/carousel.html",
       link: function (scope, element, attributes) {
 
-        var maxImages = 4;
-
-        scope.items = scope.items.map(function (item) {
-          item.images = item.images.length > maxImages ? item.images.slice(0, maxImages) : item.images;
+        function clampImages(item) {
+          item.images = item.images.length > defaults.maxImages ? item.images.slice(0, defaults.maxImages) : item.images;
+          item.active = false;
           return item;
-        });
-      }
+        }
 
+        scope.items = scope.items.map(clampImages);
+
+        scope.activeIndex = 0;
+        if (scope.items.length > 0) {
+          scope.items[0].active = true;
+        }
+
+        scope.isActive = function (index) {
+          if (scope.items[index] === undefined) return false;
+          return scope.items[index].active === true;
+        };
+
+        scope.next = function () {
+          scope.direction = "right";
+          scope.items[scope.activeIndex].active = false;
+          scope.activeIndex = scope.activeIndex + 1 == defaults.maxImages ? 0 : scope.activeIndex + 1;
+          scope.items[scope.activeIndex].active = true;
+        };
+
+        scope.prev = function () {
+          scope.direction = "left";
+          scope.items[scope.activeIndex].active = false;
+          scope.activeIndex = scope.activeIndex - 1 == -1 ? defaults.maxImages - 1 : scope.activeIndex - 1;
+          scope.items[scope.activeIndex].active = true;
+        };
+      }
     };
-  })
+  }])
 ;
 
