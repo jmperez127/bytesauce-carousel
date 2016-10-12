@@ -2,12 +2,80 @@
   @import "skeleton";
   @import "bits";
   @include top-buffers;
+  $height: 500px;
 
   img {
-    max-width: 100%;
+    max-height: $height;
   }
 
   .text-center {
     text-align: center;
   }
+  .hide {
+    display: none !important;
+  }
+  .show {
+    display: block !important;
+  }
+
+  .row {
+    overflow: hidden;
+  }
+  .columns {
+    margin: 0;
+  }
+  .three.columns {
+    width: 25%;
+    height: $height;
+    img {
+      max-height: 100%;
+    }
+  }
+  .four.columns {
+    width: 33.3%;
+    height: $height;
+    img {
+      max-height: 130%;
+    }
+  }
+
+  .six.columns {
+    width: 50%;
+    height: $height;
+    img {
+      max-height: 193%;
+    }
+  }
+  .twelve.columns {
+    width: 100%;
+    height: $height;
+    img {
+      max-height: 210%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -5%;
+    }
+  }
+
+
+  @media (max-width: 1136px) {
+    .column, .columns {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: #000;
+    transition-property: color;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s;
+    //transition: color 0.7s ease-in 0.3s;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
 }

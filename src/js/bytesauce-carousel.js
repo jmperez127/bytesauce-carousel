@@ -31,32 +31,32 @@
 
 angular.module('bytesauceCarousel', [])
 
-    .constant('VERSION', '0.1.0')
+  .constant('VERSION', '0.1.0')
 
-    .value('defaults', {
-        items: ['']
-    })
+  .value('defaults', {
+    items: ['']
+  })
 
-    .factory('factoryName', function () {
+  .factory('factoryName', function () {
 
-    })
+  })
 
-    .directive('bytesauceCarousel', function () {
-        return {
-            restrict: 'E',
-            template: "<h1>Hello</h1>",
-            compile : function(element, attributes){
-                element.css("border", "1px solid #cccccc");
+  .directive('bytesauceCarousel', function () {
+    return {
+      restrict: 'E',
+      templateUrl: "src/templates/carousel.html",
+      compile: function (element, attributes) {
+        element.css("border", "1px solid #cccccc");
 
-                var linkFunction = function($scope, element, attributes) {
-                    console.log($scope.items, "ITEMS");
-                    element.html("Student: <b>" + $scope.items[0] + "</b><br/>");
-                    element.css("background-color", "#ff00ff");
-                };
-                return linkFunction;
+        //var linkFunction = function ($scope, element, attributes) {
+        //  console.log($scope.items, "ITEMS");
+        //  element.html("Student: <b>" + $scope.items[0] + "</b><br/>");
+        //  element.css("background-color", "#ff00ff");
+        //};
+        //return linkFunction;
 
-            }
-        };
-    })
+      }
+    };
+  })
 ;
 

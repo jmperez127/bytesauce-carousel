@@ -440,6 +440,49 @@ there.
   .bytesauce-carousel .top-buffer-100 {
     margin-top: 100px; }
   .bytesauce-carousel img {
-    max-width: 100%; }
+    max-height: 500px; }
   .bytesauce-carousel .text-center {
     text-align: center; }
+  .bytesauce-carousel .hide {
+    display: none !important; }
+  .bytesauce-carousel .show {
+    display: block !important; }
+  .bytesauce-carousel .row {
+    overflow: hidden; }
+  .bytesauce-carousel .columns {
+    margin: 0; }
+  .bytesauce-carousel .three.columns {
+    width: 25%;
+    height: 500px; }
+    .bytesauce-carousel .three.columns img {
+      max-height: 100%; }
+  .bytesauce-carousel .four.columns {
+    width: 33.3%;
+    height: 500px; }
+    .bytesauce-carousel .four.columns img {
+      max-height: 130%; }
+  .bytesauce-carousel .six.columns {
+    width: 50%;
+    height: 500px; }
+    .bytesauce-carousel .six.columns img {
+      max-height: 193%; }
+  .bytesauce-carousel .twelve.columns {
+    width: 100%;
+    height: 500px; }
+    .bytesauce-carousel .twelve.columns img {
+      max-height: 210%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -5%; }
+  @media (max-width: 1136px) {
+    .bytesauce-carousel .column, .bytesauce-carousel .columns {
+      margin: 0; } }
+  .bytesauce-carousel a {
+    color: #000;
+    transition-property: color;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s; }
+  .bytesauce-carousel a:hover {
+    color: #fff; }

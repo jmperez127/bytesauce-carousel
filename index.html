@@ -1,34 +1,15 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <title>Bytesauce carousel</title>
-    <link rel="stylesheet" href="src/css/bytesauce-carousel.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel="stylesheet" href="src/css/bytesauce-carousel.css">
+  <title>Bytesauce carousel</title>
 </head>
 <body ng-app="carouselDemo">
 
-<div ng-controller="appCtrl" class="bytesauce-carousel">
-    <div class="container">
-        <h3>Bytesauce Carousel Demo</h3>
-
-
-        <bytesauce-carousel ng-model="items"></bytesauce-carousel>
-
-        <div class="row">
-            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
-            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
-            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
-            <div class="three columns"><img src="http://lorempixel.com/400/200" alt=""></div>
-
-        </div>
-        <div class="row text-center top-buffer-20">
-            <button class="button-primary">Prev</button>
-            <button class="button-primary">Next</button>
-        </div>
-
-
-    </div>
-
+<div ng-controller="appCtrl">
+  <bytesauce-carousel ng-model="items"></bytesauce-carousel>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
